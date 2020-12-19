@@ -207,7 +207,7 @@
                                 <td class="bordesid"id="no"     style=" text-align: center;">{{i+1}}</td>
                                 <td class="bordes"              style=" text-align: center;">{{u.materia_prima_nombre}}</td>
                                 <td class="bordes"  id="no4"    style=" text-align: center;">{{u.cantidad_materias}}</td>
-                                <td class="bordes"  id="no2"    style="text-align: center;">
+                                <td class="bordes"  id="no3"    style="text-align: center;">
                                     <p *ngIf="u.plagas==1">Ausencia</p>
                                     <p *ngIf="u.plagas==0">Existencia</p>
                                 </td>
@@ -215,7 +215,10 @@
                                     <p *ngIf="u.materias_extranas==1">Ausencia</p>
                                     <p *ngIf="u.materias_extranas==0">Existencia</p>
                                 </td>
-                                <td class="bordes"  style="text-align: center;" (click)="idcarritoprima(u) " data-toggle="modal" data-target="#exampleModalCenter" ><fa-icon [icon]="faCoffee" ></fa-icon></td>
+                                <td class="bordes"  style="text-align: center;" >
+                                    <fa-icon [icon]="faCoffee" class="mr-2 ml-2" (click)="idcarritoprima(u) " data-toggle="modal" data-target="#exampleModalCenter" ></fa-icon>
+                                    <fa-icon [icon]="Remove" class="mr-2 ml-2" (click)="deletecarrito(u.id)"></fa-icon>
+                                </td>
                         </tr>
                     </tbody>
                 </table>

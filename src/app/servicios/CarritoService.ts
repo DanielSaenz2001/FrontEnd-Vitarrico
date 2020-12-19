@@ -46,4 +46,10 @@ export class CarritoService {
       }
     });
   }
+  delete(id,token): Observable<any> {
+    return this.http.delete<any>(`${this.endPoint}/${id}`,{ headers:{
+      'Authorization': "Bearer " + token,
+      }
+    });
+  }
 }

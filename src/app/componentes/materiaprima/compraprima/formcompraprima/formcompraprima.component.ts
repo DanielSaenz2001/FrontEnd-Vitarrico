@@ -7,6 +7,7 @@ import { ProveedorService } from 'src/app/servicios/ProveedorService';
 import { PrimaService } from 'src/app/servicios/PrimaService';
 import { CarritoService } from 'src/app/servicios/CarritoService';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-formcompraprima',
@@ -15,6 +16,7 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 })
 export class FormcompraprimaComponent implements OnInit {
   faCoffee = faInfoCircle;
+  Remove = faTrash;
   constructor(private token: TokenService, private route: ActivatedRoute,
     private InprimaService:IngresoPrimasService,private formBuild: FormBuilder,
     private proveedores:ProveedorService,private primaService:PrimaService,private carritoService:CarritoService
@@ -104,6 +106,11 @@ export class FormcompraprimaComponent implements OnInit {
   comprar(){
     this.InprimaService.create(this.InPrima.value, this.token.getAuth()).subscribe(response=>{
       this.router.navigate(['/compra/prima']);
+    })
+  }
+  deletecarrito(id){
+    this.carritoService.delete(id,this.token.getAuth()).subscribe(response=>{
+      this.listcarrito()
     })
   }
 }

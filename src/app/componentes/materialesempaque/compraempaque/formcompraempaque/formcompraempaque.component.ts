@@ -7,6 +7,7 @@ import { ProveedorService } from 'src/app/servicios/ProveedorService';
 import { EmpaqueService } from 'src/app/servicios/EmpaqueService';
 import { CarritoService } from 'src/app/servicios/CarritoService';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-formcompraempaque',
@@ -16,6 +17,7 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 export class FormcompraempaqueComponent implements OnInit {
 
   faCoffee = faInfoCircle;
+  Remove = faTrash;
   constructor(private token: TokenService, private route: ActivatedRoute,
     private ingresoEmpaquesService:IngresoEmpaquesService,private formBuild: FormBuilder,
     private proveedores:ProveedorService,private empaqueService:EmpaqueService,private carritoService:CarritoService
@@ -108,5 +110,9 @@ export class FormcompraempaqueComponent implements OnInit {
         this.router.navigate(['/compra/empaque']);
       })
     }
-
+    deletecarrito(id){
+      this.carritoService.delete(id,this.token.getAuth()).subscribe(response=>{
+        this.listcarrito()
+      })
+    }
 }
