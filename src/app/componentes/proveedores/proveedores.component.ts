@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TokenService } from 'src/app/servicios/TokenService';
-import { ProveedoresService } from 'src/app/servicios/ProveedoresService';
+import { ProveedorService } from 'src/app/servicios/ProveedorService';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
-//import { ProveedoresService } from 'src/app/servicios/ProveedoresService';
 
 @Component({
   selector: 'app-proveedores',
@@ -13,7 +12,7 @@ export class ProveedoresComponent implements OnInit {
 
   faCoffee = faInfoCircle;
   Listproveedores;
-  constructor(private proveedor:ProveedoresService,
+  constructor(private proveedor:ProveedorService,
     private token:TokenService) { }
 
   ngOnInit(): void {

@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { TokenService } from 'src/app/servicios/TokenService';
 import { JarwisService } from 'src/app/servicios/JarwisService';
-import { ProveedoresService } from 'src/app/servicios/ProveedoresService';
+import { ProveedorService } from 'src/app/servicios/ProveedorService';
 
 @Component({
   selector: 'app-formproveedores',
@@ -13,7 +13,7 @@ import { ProveedoresService } from 'src/app/servicios/ProveedoresService';
 export class FormproveedoresComponent implements OnInit {
 
   constructor(private token: TokenService, private route: ActivatedRoute,
-    private formBuild: FormBuilder, private proveedoresService: ProveedoresService,
+    private formBuild: FormBuilder, private proveedoresService: ProveedorService,
     private jarwis:JarwisService,private router: Router) { }
 
     ListUsuario;

@@ -1,1 +1,44 @@
-<p>compraprima works!</p>
+<app-sidebar></app-sidebar>
+<main>
+
+    <div class="container mt-3">
+        <div class="row mt-3 mb-3">
+        </div>
+        <div class="card" style="position: inherit">
+            <div class="card-header">
+                <h4>Compra de Materias Primas</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12" style="text-align: end;">
+                        <button class="boton form-class ml-2 mr-2" routerLink="crear">Agregar</button>
+                        <button class="boton form-class ml-2 mr-2" routerLink="/prima">Regresar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container mb-3">
+                <table class="table">
+                    <thead style="background-color: #DAC0CF;">
+                        <tr >
+                            <th id="no">#</th>
+                            <th>Proveedor</th>
+                            <th id="no2">Factura</th>
+                            <th id="no3">Fecha</th>
+                            <th>Detalles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let u of ListCompra; index as i">
+                                <td class="bordesid"id="no"     style=" text-align: center;">{{i+1}}</td>
+                                <td class="bordes"              style=" text-align: center;">{{u.proveedor}}</td>
+                                <td class="bordes"  id="no4"    style=" text-align: center;">{{u.nFactura}}</td>
+                                <td class="bordes"  id="no3"    style="text-align: center;">{{u.fecha | date}}</td>
+                                <td class="bordes"  style="text-align: center;" routerLink="{{u.id}}"><fa-icon [icon]="faCoffee" ></fa-icon></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</main>

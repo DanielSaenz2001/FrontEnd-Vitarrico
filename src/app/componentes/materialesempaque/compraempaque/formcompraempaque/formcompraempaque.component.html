@@ -3,7 +3,7 @@
     <div class="mt-2" *ngIf="ListCompra&& tipo == 'vista'">
         <div class="row mt-3 mb-2" style="color: white;">
             <div  style="width: 90%; border: 1px solid #EC808D; color: #750036; background-color: #DAC0CF;">
-                <b style="vertical-align: middle;">||Ingreso de materias primas"</b>
+                <b style="vertical-align: middle;">||Ingreso de materiales de empaque"</b>
               </div> 
         </div>
         <div class="row mt-3 mb-5" style="color: white;">
@@ -80,24 +80,23 @@
                                             <th id="no">#</th>
                                             <th>Nombre</th>
                                             <th id="no4">Cantidad</th>
-                                            <th id="no3">Plagas</th>
-                                            <th id="no2">M. Extrañas</th>
+                                            <th id="no3">Laminacion</th>
+                                            <th id="no2">Color</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr *ngFor="let u of ListDetalles; index as i">
                                                 <td class="bordesid"id="no"     style=" text-align: center;">
-                                                    <img src="{{u.materia_prima_imagen}}" alt="" style="width: 30px;">
+                                                    <img src="{{u.material_empaque_imagen}}" alt="" style="width: 30px;">
                                                 </td>
-                                                <td class="bordes"              style=" text-align: center;">{{u.materia_prima_nombre}}</td>
-                                                <td class="bordes"  id="no4"    style=" text-align: center;">{{u.cantidad_prima}}</td>
+                                                <td class="bordes"              style=" text-align: center;">{{u.material_empaque_nombre}}</td>
+                                                <td class="bordes"  id="no4"    style=" text-align: center;">{{u.cantidad_empaque}}</td>
                                                 <td class="bordes"  id="no3"    style="text-align: center;">
-                                                    <p *ngIf="u.plagas == 1"> Existente</p>
-                                                    <p *ngIf="u.plagas == 0"> No existente</p>
+                                                    <p *ngIf="u.laminacion == 1"> Existente</p>
+                                                    <p *ngIf="u.laminacion == 0"> No existente</p>
                                                 </td>
                                                 <td class="bordes"  id="no2"    style="text-align: center;">
-                                                    <p *ngIf="u.materias_extranas == 1"> Existente</p>
-                                                    <p *ngIf="u.materias_extranas == 0"> No existente</p>
+                                                    {{u.color}}
                                                 </td>
                                         </tr>
                                     </tbody>
@@ -118,7 +117,7 @@
                     <div class="col mb-2 mt-2">
                     </div>
                     <div class="col mb-2 mt-2">                
-                        <button class="boton form-control" routerLink="/compra/prima">Regresar</button>
+                        <button class="boton form-control" routerLink="/compra/empaque">Regresar</button>
                     </div>
                 </div>
             </div>
@@ -130,7 +129,7 @@
                 <h4>Comprar Materia Prima</h4>
             </div>
             <div class="card-body">
-              <form class="mb-3" [formGroup]="InPrima">
+              <form class="mb-3" [formGroup]="InEmpaque">
                 <div class="row">
                   <div class="col-6">
                     <div class="row mb-5">
@@ -197,23 +196,22 @@
                             <th id="no">#</th>
                             <th>Nombre</th>
                             <th id="no4">Cantidad</th>
-                            <th id="no2">Plagas</th>
-                            <th id="no3">M. Extrañas</th>
+                            <th id="no2">Color</th>
+                            <th id="no3">Laminacion</th>
                             <th>Detalles</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let u of ListCarrito; index as i">
                                 <td class="bordesid"id="no"     style=" text-align: center;">{{i+1}}</td>
-                                <td class="bordes"              style=" text-align: center;">{{u.materia_prima_nombre}}</td>
-                                <td class="bordes"  id="no4"    style=" text-align: center;">{{u.cantidad_materias}}</td>
+                                <td class="bordes"              style=" text-align: center;">{{u.materia_empaque_nombre}}</td>
+                                <td class="bordes"  id="no4"    style=" text-align: center;">{{u.cantidad_empaque}}</td>
                                 <td class="bordes"  id="no2"    style="text-align: center;">
-                                    <p *ngIf="u.plagas==1">Ausencia</p>
-                                    <p *ngIf="u.plagas==0">Existencia</p>
+                                    {{u.color}}
                                 </td>
                                 <td class="bordes"  id="no2"    style="text-align: center;">
-                                    <p *ngIf="u.materias_extranas==1">Ausencia</p>
-                                    <p *ngIf="u.materias_extranas==0">Existencia</p>
+                                    <p *ngIf="u.laminacion==1">Laminado</p>
+                                    <p *ngIf="u.laminacion==0">No laminado</p>
                                 </td>
                                 <td class="bordes"  style="text-align: center;" (click)="idcarritoprima(u) " data-toggle="modal" data-target="#exampleModalCenter" ><fa-icon [icon]="faCoffee" ></fa-icon></td>
                         </tr>
@@ -229,7 +227,7 @@
                             <button class="boton form-class" (click)="comprar()">Comprar</button>
                         </div>
                         <div class="col">                
-                            <button class="boton form-control"  routerLink="/compra/prima">Regresar</button>
+                            <button class="boton form-control"  routerLink="/compra/empaque">Regresar</button>
                         </div>
                     </div>
                 </div>
@@ -242,7 +240,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle" style="margin: auto;">Registro de Etapas:</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle" style="margin: auto;">Detalles:</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
@@ -258,37 +256,34 @@
                                             Cantidad:
                                         </div>
                                         <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                                            <input type="number" class="form-control" formControlName="cantidad_materias" >
+                                            <input type="number" class="form-control" formControlName="cantidad_empaque" >
                                         </div>
                                     </div>
                                     <div class="row mb-2 mt-2">
                                         <div class="dato col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                            Plagas:
+                                            Calidad:
                                         </div>
                                         <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                                            <select  class="form-control" formControlName="plagas">
-                                                <option value="1">Ausencia</option>
-                                                <option value="0">Existencia</option>
+                                            <input type="text" class="form-control" formControlName="calidad" >
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2 mt-2">
+                                        <div class="dato col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                            Laminacion:
+                                        </div>
+                                        <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                            <select  class="form-control" formControlName="laminacion">
+                                                <option value="1">Laminado</option>
+                                                <option value="0">No laminado</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="row mb-2 mt-2">
                                         <div class="dato col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                            M. Extraños:
+                                            Color:
                                         </div>
                                         <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                                            <select  class="form-control" formControlName="materias_extranas">
-                                                <option value="1">Ausencia</option>
-                                                <option value="0">Existencia</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-2 mt-2">
-                                        <div class="dato col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                            Integridad:
-                                        </div>
-                                        <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                                            <input type="text" class="form-control" formControlName="integridad" >
+                                            <input type="text" class="form-control" formControlName="color" >
                                         </div>
                                     </div>
                                 </form>

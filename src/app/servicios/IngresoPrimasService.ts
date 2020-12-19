@@ -5,9 +5,9 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ProveedoresService {
+export class IngresoPrimasService {
 
-  endPoint ='http://127.0.0.1:8000/api/proveedores'
+  endPoint ='http://127.0.0.1:8000/api/ingresoMateriasPrimas'
   constructor(private http:HttpClient) { }
 
   list(token){
@@ -18,6 +18,12 @@ export class ProveedoresService {
   }
   getById(id,token){
     return this.http.get<any>(`${this.endPoint}/${id}`,{ headers:{
+      'Authorization': "Bearer " + token,
+      }
+    });
+  }
+  detalles(id,token){
+    return this.http.get<any>(`${this.endPoint}Detalles/${id}`,{ headers:{
       'Authorization': "Bearer " + token,
       }
     });
@@ -34,5 +40,6 @@ export class ProveedoresService {
       }
     });
   }
-  
+
+  //
 }

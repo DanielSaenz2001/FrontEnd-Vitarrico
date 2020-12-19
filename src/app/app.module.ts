@@ -25,6 +25,8 @@ import { FormprimaComponent } from './componentes/materiaprima/formprima/formpri
 import { FormproductosComponent } from './componentes/productos/formproductos/formproductos.component';
 import { CompraprimaComponent } from './componentes/materiaprima/compraprima/compraprima.component';
 import { FormcompraprimaComponent } from './componentes/materiaprima/compraprima/formcompraprima/formcompraprima.component';
+import { CompraempaqueComponent } from './componentes/materialesempaque/compraempaque/compraempaque.component';
+import { FormcompraempaqueComponent } from './componentes/materialesempaque/compraempaque/formcompraempaque/formcompraempaque.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent, canActivate: [BeforeLoginGuard]},
@@ -39,6 +41,10 @@ const routes: Routes = [
   {path: 'empaque/:id', component: FormempaqueComponent, canActivate: [AfterLoginGuard]},
   {path: 'productos', component: ProductosComponent, canActivate: [AfterLoginGuard]},
   {path: 'productos/:id', component: FormproductosComponent, canActivate: [AfterLoginGuard]},
+  {path: 'compra/prima', component: CompraprimaComponent, canActivate: [AfterLoginGuard]},
+  {path: 'compra/prima/:id', component: FormcompraprimaComponent, canActivate: [AfterLoginGuard]},
+  {path: 'compra/empaque', component: CompraempaqueComponent, canActivate: [AfterLoginGuard]},
+  {path: 'compra/empaque/:id', component: FormcompraempaqueComponent, canActivate: [AfterLoginGuard]},
 ];
 
 @NgModule({
@@ -59,7 +65,9 @@ const routes: Routes = [
     FormprimaComponent,
     FormproductosComponent,
     CompraprimaComponent,
-    FormcompraprimaComponent
+    FormcompraprimaComponent,
+    CompraempaqueComponent,
+    FormcompraempaqueComponent
   ],
   imports: [
     BrowserModule,

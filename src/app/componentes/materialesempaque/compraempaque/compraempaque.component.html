@@ -6,13 +6,13 @@
         </div>
         <div class="card" style="position: inherit">
             <div class="card-header">
-                <h4>Lista de Materiales de Empaque</h4>
+                <h4>Compra de Materiales de Empaque</h4>
             </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-12" style="text-align: end;">
                         <button class="boton form-class ml-2 mr-2" routerLink="crear">Agregar</button>
-                        <button class="boton form-class ml-2 mr-2" routerLink="/compra/empaque">Comprar</button>
+                        <button class="boton form-class ml-2 mr-2" routerLink="/empaque">Regresar</button>
                     </div>
                 </div>
             </div>
@@ -21,20 +21,18 @@
                     <thead style="background-color: #DAC0CF;">
                         <tr >
                             <th id="no">#</th>
-                            <th>Nombre</th>
-                            <th id="no4">Stock</th>
-                            <th id="no3">Medidas</th>
-                            <th id="no2">Peso</th>
+                            <th>Proveedor</th>
+                            <th id="no2">Factura</th>
+                            <th id="no3">Fecha</th>
                             <th>Detalles</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let u of Listproductos; index as i">
+                        <tr *ngFor="let u of ListCompra; index as i">
                                 <td class="bordesid"id="no"     style=" text-align: center;">{{i+1}}</td>
-                                <td class="bordes"              style=" text-align: center;">{{u.nombre}}</td>
-                                <td class="bordes"  id="no4"    style=" text-align: center;">{{u.stock}}</td>
-                                <td class="bordes"  id="no3"    style="text-align: center;">{{u.medidas}}</td>
-                                <td class="bordes"  id="no2"    style="text-align: center;">{{u.peso_bruto}}</td>
+                                <td class="bordes"              style=" text-align: center;">{{u.proveedor}}</td>
+                                <td class="bordes"  id="no4"    style=" text-align: center;">{{u.nFactura}}</td>
+                                <td class="bordes"  id="no3"    style="text-align: center;">{{u.fecha | date}}</td>
                                 <td class="bordes"  style="text-align: center;" routerLink="{{u.id}}"><fa-icon [icon]="faCoffee" ></fa-icon></td>
                         </tr>
                     </tbody>

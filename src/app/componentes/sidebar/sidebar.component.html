@@ -26,34 +26,29 @@
         </a>
       </li>
 
-      <li class="nav-item" *ngIf="componente.component.name !== 'MateriaprimaComponent'">
+      <li class="nav-item" *ngIf="componente.component.name !== 'MateriaprimaComponent' && componente.component.name !=='FormcompraprimaComponent'&& componente.component.name !=='CompraprimaComponent'&& componente.component.name !=='FormprimaComponent'">
         <a href="/prima" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="apple-alt" class="svg-inline--fa fa-apple-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M350.85 129c25.97 4.67 47.27 18.67 63.92 42 14.65 20.67 24.64 46.67 29.96 78 4.67 28.67 4.32 57.33-1 86-7.99 47.33-23.97 87-47.94 119-28.64 38.67-64.59 58-107.87 58-10.66 0-22.3-3.33-34.96-10-8.66-5.33-18.31-8-28.97-8s-20.3 2.67-28.97 8c-12.66 6.67-24.3 10-34.96 10-43.28 0-79.23-19.33-107.87-58-23.97-32-39.95-71.67-47.94-119-5.32-28.67-5.67-57.33-1-86 5.32-31.33 15.31-57.33 29.96-78 16.65-23.33 37.95-37.33 63.92-42 15.98-2.67 37.95-.33 65.92 7 23.97 6.67 44.28 14.67 60.93 24 16.65-9.33 36.96-17.33 60.93-24 27.98-7.33 49.96-9.67 65.94-7zm-54.94-41c-9.32 8.67-21.65 15-36.96 19-10.66 3.33-22.3 5-34.96 5l-14.98-1c-1.33-9.33-1.33-20 0-32 2.67-24 10.32-42.33 22.97-55 9.32-8.67 21.65-15 36.96-19 10.66-3.33 22.3-5 34.96-5l14.98 1 1 15c0 12.67-1.67 24.33-4.99 35-3.99 15.33-10.31 27.67-18.98 37z"></path></svg>
           <span class="link-text" id="aea">Materias Primas</span>
         </a>
       </li>
-      <li class="nav-item"*ngIf="componente.component.name !== 'MaterialesempaqueComponent'" >
+      <li class="nav-item"*ngIf="componente.component.name !== 'MaterialesempaqueComponent'&& componente.component.name !=='FormempaqueComponent'&& componente.component.name !=='CompraempaqueComponent'&& componente.component.name !=='FormcompraempaqueComponent' " >
         <a href="/empaque" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="archive" class="svg-inline--fa fa-archive fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"></path></svg>
           <span class="link-text" id="aea">Materiales de Empaque</span>
         </a>
       </li>
-      <li class="nav-item" *ngIf="componente.component.name !== 'ProductosComponent'">
+      <li class="nav-item" *ngIf="componente.component.name !== 'ProductosComponent'&& componente.component.name !=='FormproductosComponent'">
         <a href="/productos" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cookie" class="svg-inline--fa fa-cookie fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M510.37 254.79l-12.08-76.26a132.493 132.493 0 0 0-37.16-72.95l-54.76-54.75c-19.73-19.72-45.18-32.7-72.71-37.05l-76.7-12.15c-27.51-4.36-55.69.11-80.52 12.76L107.32 49.6a132.25 132.25 0 0 0-57.79 57.8l-35.1 68.88a132.602 132.602 0 0 0-12.82 80.94l12.08 76.27a132.493 132.493 0 0 0 37.16 72.95l54.76 54.75a132.087 132.087 0 0 0 72.71 37.05l76.7 12.14c27.51 4.36 55.69-.11 80.52-12.75l69.12-35.21a132.302 132.302 0 0 0 57.79-57.8l35.1-68.87c12.71-24.96 17.2-53.3 12.82-80.96zM176 368c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm32-160c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm160 128c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path></svg>
           <span class="link-text" id="aea">Productos</span>
         </a>
       </li>
       <li class="nav-item" (click)="salir()">
-         
-
-        <a class="nav-link"  id="no" >
-            <img src="{{user.imagen_user}}" alt="">   
-          <span class="link-text" style="text-align: center;">
-            {{user.name}}</span>
+        <a  class="nav-link">
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sign-out-alt" class="svg-inline--fa fa-sign-out-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z"></path></svg>
+          <span class="link-text" id="aea">Salir del sistema</span>
         </a>
-
-        
       </li>
     </ul>
 </nav>
