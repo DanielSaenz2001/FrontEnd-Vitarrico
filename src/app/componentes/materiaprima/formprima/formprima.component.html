@@ -1,0 +1,191 @@
+<app-sidebar></app-sidebar>
+<main>
+  <div class="container mt-3">
+    <div *ngIf="tipo =='crear'">
+      <div class="card" style="position: inherit">
+        <div class="card-header">
+            <h4>Agregar Materia Prima</h4>
+        </div>
+        <div class="card-body">
+          <form class="mb-3" [formGroup]="PrimaForm">
+            <div class="row">
+              <div class="col-6">
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Imagen:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="imagen_materias_primas" >
+                  </div>
+                </div>
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Origen:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <input type="text" class="form-control" formControlName="origen" >
+                  </div>
+                </div>
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Codigo:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="codigo_materia_prima" >
+                  </div>
+                </div>
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                    Descrip:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <input type="text" class="form-control" formControlName="descripcion" >
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Nombre:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="nombre">
+                  </div>
+              </div>
+              <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Stock:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="stock">
+                  </div>
+              </div>
+              <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Unidad:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="unidad">
+                  </div>
+              </div>
+              </div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-2 mb-2" style=" text-align: center !important;">
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-2 mb-2" style=" text-align: center !important;">
+                <div class="row">
+                    <div class="col">
+                        <button class="boton form-class" (click)="crear()">Agregar</button>
+                    </div>
+                    <div class="col">                
+                        <button class="boton form-control"  routerLink="/prima">Regresar</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="tipo =='update'"> 
+      <div class="card" style="position: inherit">
+        <div class="card-header">
+            <h4>Actualizar Materia Prima</h4>
+        </div>
+        <div class="card-body">
+          <form class="mb-3" [formGroup]="PrimaForm">
+            <div class="row">
+              <div class="col-6">
+                <div class="row mb-3">
+                  <div class="col-12" style="text-align: center;">
+                    <img src="{{PrimaForm.value.imagen_materias_primas}}"  
+                      aling="is-centered" style="width: 150px;">
+                  </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                        Imagen:
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                        <input type="text" class="form-control" formControlName="imagen_materias_primas" >
+                    </div>
+                  </div>
+                  
+
+              </div>
+              <div class="col-6">
+                <div class="row mb-5">
+                    <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                        Nombre:
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                        <input type="text" class="form-control" formControlName="nombre">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                        Stock:
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                        <input type="text" class="form-control" formControlName="stock">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                        Unidad:
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                        <input type="text" class="form-control" formControlName="unidad">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                        Origen:
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="origen" >
+                    </div>
+                  </div>
+                  <div class="row mb-5">
+                    <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                        Codigo:
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                        <input type="text" class="form-control" formControlName="codigo_materia_prima" >
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                    Descrip:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="descripcion" >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-2 mb-2" style=" text-align: center !important;">
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-2 mb-2" style=" text-align: center !important;">
+                <div class="row">
+                    <div class="col">
+                        <button class="boton form-class" (click)="actualizar()">Agregar</button>
+                    </div>
+                    <div class="col">                
+                        <button class="boton form-control"  routerLink="/prima">Regresar</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

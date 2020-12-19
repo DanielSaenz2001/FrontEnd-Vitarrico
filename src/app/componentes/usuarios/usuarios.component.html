@@ -1,0 +1,45 @@
+<app-sidebar></app-sidebar>
+<main>
+
+    <div class="container mt-3">
+        <div class="row mt-3 mb-3">
+        </div>
+        <div class="card" style="position: inherit">
+            <div class="card-header">
+                <h4>Lista de Usuarios</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12" style="text-align: end;">
+                        <button class="boton form-class" routerLink="crear">Agregar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container mb-3">
+                <table class="table">
+                    <thead style="background-color: #DAC0CF;">
+                        <tr >
+                            <th id="no">#</th>
+                            <th>Nombre</th>
+                            <th id="no4">Email</th>
+                            <th id="no3">Rol</th>
+                            <th id="no2">Área</th>
+                            <th>Detalles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let u of Listusuarios; index as i">
+                                <td class="bordesid"id="no"     style=" text-align: center;">{{i+1}}</td>
+                                <td class="bordes"              style=" text-align: center;">{{u.name}}</td>
+                                <td class="bordes"  id="no4"    style=" text-align: center;">{{u.email}}</td>
+                                <td class="bordes"  id="no3"    style="text-align: center;">{{u.rol}}</td>
+                                <td class="bordes"  id="no2"    style="text-align: center;">{{u.area}}</td>
+                                <td class="bordes"  style="text-align: center;" routerLink="{{u.id}}"><fa-icon [icon]="faCoffee" ></fa-icon></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</main>

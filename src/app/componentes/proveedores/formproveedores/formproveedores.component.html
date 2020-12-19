@@ -1,0 +1,226 @@
+<app-sidebar></app-sidebar>
+<main>
+  <div class="container mt-3">
+    <div *ngIf="tipo =='crear'">
+      <div class="card" style="position: inherit">
+        <div class="card-header">
+            <h4>Agregar Proveedor</h4>
+        </div>
+        <div class="card-body">
+          <form class="mb-3" [formGroup]="ProveedorForm">
+            <div class="row">
+              <div class="col-6">
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Imagen:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="imagen_proveedores" >
+                  </div>
+                </div>
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Tipo:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <input type="text" class="form-control" formControlName="tipo" >
+                  </div>
+                </div>
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Responsable:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <input type="text" class="form-control" formControlName="responsable" >
+                  </div>
+                </div>
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Telefono:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="telefono" >
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Nombre:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="nombre">
+                  </div>
+              </div>
+              <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Email:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="correo_electronico">
+                  </div>
+              </div>
+              <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      RUC:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="ruc">
+                  </div>
+              </div>
+              <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Codigo:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <input type="text" class="form-control" formControlName="codigo_proveedor">
+                  </div>
+              </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Direccion:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="direccion" >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-2 mb-2" style=" text-align: center !important;">
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-2 mb-2" style=" text-align: center !important;">
+                <div class="row">
+                    <div class="col">
+                        <button class="boton form-class" (click)="crear()">Agregar</button>
+                    </div>
+                    <div class="col">                
+                        <button class="boton form-control"  routerLink="/proveedores">Regresar</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="tipo =='update'"> 
+      <div class="card" style="position: inherit">
+        <div class="card-header">
+            <h4>Actualizar Proveedor</h4>
+        </div>
+        <div class="card-body">
+          <form class="mb-3" [formGroup]="ProveedorForm">
+            <div class="row">
+              <div class="col-6">
+                <div class="row mb-3">
+                  <div class="col-12" style="text-align: center;">
+                    <img src="{{ProveedorForm.value.imagen_proveedores}}"  
+                      aling="is-centered" style="width: 150px;">
+                  </div>
+                </div>
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Imagen:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="imagen_proveedores" >
+                  </div>
+                </div>
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Tipo:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <input type="text" class="form-control" formControlName="tipo" >
+                  </div>
+                </div>
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Responsable:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <input type="text" class="form-control" formControlName="responsable" >
+                  </div>
+                </div>
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Telefono:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="telefono" >
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-6">
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Nombre:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="nombre">
+                  </div>
+              </div>
+              <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Email:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="correo_electronico">
+                  </div>
+              </div>
+              <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      RUC:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="ruc">
+                  </div>
+              </div>
+              <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Codigo:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <input type="text" class="form-control" formControlName="codigo_proveedor">
+                  </div>
+              </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="row mb-5">
+                  <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                      Direccion:
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <input type="text" class="form-control" formControlName="direccion" >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-2 mb-2" style=" text-align: center !important;">
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-2 mb-2" style=" text-align: center !important;">
+                <div class="row">
+                    <div class="col">
+                        <button class="boton form-class" (click)="actualizar()">Agregar</button>
+                    </div>
+                    <div class="col">                
+                        <button class="boton form-control"  routerLink="/proveedores">Regresar</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

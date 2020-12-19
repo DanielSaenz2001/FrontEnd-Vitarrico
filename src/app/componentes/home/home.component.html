@@ -1,0 +1,239 @@
+<app-sidebar></app-sidebar>
+<main>
+        <div *ngIf="tipo2 == 'vista' && ListUsuarios">
+            <div class="row mt-3 mb-2" style="color: white;">
+                <div  style="width: 90%; border: 1px solid #EC808D; color: #750036; background-color: #DAC0CF;">
+                    <b style="vertical-align: middle;">||DATOS DEL EMPLEADO, SISTEMA DE  ALMACEN"</b>
+                  </div> 
+            </div>
+            <div class="row mt-3 mb-5" style="color: white;">
+                <div class="col-5">
+                    <div class="row">
+                        <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                            Tipo de Documento:
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8" >
+                            Cedula
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="row">
+                        <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                            Nro de Documento:
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                            {{ListUsuarios.dni}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="color: white;">
+                <div class="col-6">
+                    <div class="row mb-3">
+                        <div class="dato col-9 col-sm-9 col-md-5 col-lg-5 col-xl-5">
+                            Nombre:
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+                            {{ListUsuarios.name}}
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="dato col-9 col-sm-9 col-md-5 col-lg-5 col-xl-5">
+                            Email:
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+                            {{ListUsuarios.email}}
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="dato col-9 col-sm-9 col-md-5 col-lg-5 col-xl-5">
+                            Rol:
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+                            {{ListUsuarios.rol}}
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="dato col-9 col-sm-9 col-md-5 col-lg-5 col-xl-5">
+                            Area:
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+                            {{ListUsuarios.area}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style="text-align: center;" >
+                    <img src="{{ListUsuarios.imagen_user}}" class="rounded-circle" style="margin: auto;width: 130px !important;">      
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-2 mb-2" style=" text-align: center !important;">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-2 mb-2" style=" text-align: center !important;">
+                    <div class="row">
+                        <div class="col mb-2 mt-2">
+                            <button class="boton form-control" (click)="cambiar('update')">Editar Datos</button>
+                        </div>
+                        <div class="col mb-2 mt-2">
+                            <button class="boton form-control" style="height: 60px;" (click)="cambiar('contra')">Cambiar de Contraseña</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="tipo2 == 'update'">
+            <div class="row mt-3 mb-2" style="color: white;">
+                <div  style="width: 90%; border: 1px solid #EC808D; color: #750036; background-color: #DAC0CF;">
+                    <b style="vertical-align: middle;">||ACTUALIZACIÓN DEL EMPLEADO, SISTEMA DE ALMACEN"</b>
+                </div> 
+            </div>
+            <div class="row" style="color: white;">
+                <div class="col-6">
+                    <form [formGroup]="UsuarioForm">
+                        <div class="row mb-5">
+                            <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                                Nombre:
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                <input type="text" class="form-control" formControlName="name" >
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                                DNI:
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                <input type="text" class="form-control" formControlName="dni" >
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                                Rol:
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                <input type="text" class="form-control" formControlName="rol" >
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                                Correo:
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                <input type="text"  class="form-control" formControlName="email" >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-6" >
+                    <form [formGroup]="UsuarioForm">
+                        <div class="row mb-5">
+                            <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                                Area:
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                <input type="text" class="form-control" formControlName="area" >
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                                Imagen:
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                <input type="search" class="form-control" formControlName="imagen_user" >
+                                
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                                Estado:
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                <select class="form-control" id="sel1" formControlName="autorizado" >
+                                    <option value=true *ngIf="UsuarioForm.value.autorizado == 1"> Habilitado </option>
+                                    <option value=true *ngIf="UsuarioForm.value.autorizado == 0"> Deshabilitado </option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-2 mb-2" style=" text-align: center !important;">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-2 mb-2" style=" text-align: center !important;">
+                    <div class="row">
+                        <div class="col">
+                            <button class="boton form-control" (click)="actualizar()">Guardar</button>
+                        </div>
+                        <div class="col">                
+                            <button class="boton form-control"  (click)="cambiar('vista')">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="tipo2 == 'contra'">
+            <div class="row mt-3 mb-2" style="color: white;">
+                <div  style="width: 90%; border: 1px solid #EC808D; color: #750036; background-color: #DAC0CF;">
+                    <b style="vertical-align: middle;">||CAMBIAR CONTRASEÑA, SISTEMA DE ALMACEN"</b>
+                </div> 
+            </div>
+            <div class="row" style="color: white;">
+                <div class="col-6">
+                    <form [formGroup]="RepetirForm">
+                        <div class="row mb-5">
+                            <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                                Correo:
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                <input type="text"  class="form-control" formControlName="email" >
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                                Contraseña antigua:
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                <input type="text"  class="form-control" formControlName="password" >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-6" >
+                    <form [formGroup]="RepetirForm">
+                        <div class="row mb-5">
+                            <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                                Contraseña nueva:
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                <input type="text"  class="form-control" formControlName="password_confirmation" >
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
+                                Repetir contraseña:
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                <input type="text"  class="form-control" formControlName="password_new" >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-2 mb-2" style=" text-align: center !important;">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-2 mb-2" style=" text-align: center !important;">
+                    <div class="row">
+                        <div class="col">
+                            <button class="boton form-control" (click)="contra()">Guardar</button>
+                        </div>
+                        <div class="col">                
+                            <button class="boton form-control"  (click)="cambiar('vista')">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>
