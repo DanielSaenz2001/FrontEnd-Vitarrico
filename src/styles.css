@@ -17,10 +17,46 @@ body{
 }
 .boton{
     background: linear-gradient(0.25turn,#FF5143, #309EAE) !important;
-    border: 1px solid #FC7DB2 !important; 
     border-radius: 8px;
-    width: 100px;
+    width: 130px;
     height: 50px;
     font-weight: bolder;
     color: black     !important;
+}
+
+table{
+    margin: 0 auto;
+    text-align: center;
+}
+thead{
+    background-color: #FF5143;
+}
+th{
+    border: 1px solid #309EAE;
+    color: black;
+    font-weight:bolder;
+    border-top: 2px solid #309EAE !important;
+    border-bottom: 2px solid #309EAE !important;
+}
+td{
+    border-top: 0px solid  #309EAE;
+}
+.bordesid{
+    color: black;
+    font-weight:bolder;
+    background-color: #FF5143;
+    border-color: #309EAE;
+    border-top:  1px #309EAE;
+    border-left: 1px solid  #309EAE;
+    border-bottom: 1px solid  #309EAE;
+    border-right: 1px solid  #309EAE;
+}
+.bordes{
+    text-align: start;
+    color: black;
+    font-weight: 470;
+    background-color:white;
+    border-top: #309EAE;
+    border-color:  1px solid #309EAE;
+    border-bottom: 1px solid  #309EAE;
 }
