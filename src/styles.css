@@ -18,7 +18,7 @@ body{
 .boton{
     background: linear-gradient(0.25turn,#FF5143, #309EAE) !important;
     border-radius: 8px;
-    width: 130px;
+    width: 110px;
     height: 50px;
     font-weight: bolder;
     color: black     !important;
@@ -59,4 +59,53 @@ td{
     border-top: #309EAE;
     border-color:  1px solid #309EAE;
     border-bottom: 1px solid  #309EAE;
+}
+.dato2{
+    color: #000;
+    font-weight: bolder;
+}
+.dato{
+    color: #000;
+    font-weight: bolder;
+}
+.resp{
+    color: #000;
+}
+@media only screen and (max-width:1000px) {
+    #no{
+        display: none;
+    }
+  }
+@media only screen and (max-width:850px){
+    #no{
+        display: none;
+    }
+    #no2{
+        display: none;
+    }
+}
+@media only screen and (max-width:780px){
+    #no{
+        display: none;
+    }
+    #no2{
+        display: none;
+    }
+    #no3{
+        display: none;
+    }
+}
+@media only screen and (max-width:584px){
+    #no{
+        display: none;
+    }
+    #no2{
+        display: none;
+    }
+    #no3{
+        display: none;
+    }
+    #no4{
+        display: none;
+    }
 }

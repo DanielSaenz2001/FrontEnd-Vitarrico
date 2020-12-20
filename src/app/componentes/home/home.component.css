@@ -35,20 +35,11 @@ select{
     border-color: 1px solid #309EAE;
 }
 
-
-.col-4, .col-sm-9 ,.col-md-4 ,.col-lg-4 ,.col-xl-4,.col-12 ,.col-sm-12 ,.col-md-8 ,.col-lg-8 ,.col-xl-8,.col-6
-.col-9 ,.col-md-4 ,.col-lg-4 ,.col-xl-4,.col-12 ,
-.col-sm-12 ,.col-md-8 ,.col-lg-8 ,.col-xl-8,.col-6, .col-md-6 ,.col-lg-6 ,.col-xl-6
-,.col-5 ,.col-7,.col-8,.col-md-6,.col-10,.col{
+.col-lg-3 ,.col-xl-3,.col-lg-2 ,.col-xl-2,.col-md-3,.col-md-2,.col-9 ,.col-sm-9
+,.col-12 ,.col-sm-12 ,.col-md-6 ,.col-lg-6 ,.col-xl-6,.col-md-12,.col-md-9,.col-5,.col-4,.col-6{
     position: initial;
 }
-.dato{
-    color: black;
-    font-weight: bolder;
-}
-.resp{
-    color: black;
-}
+
 @media only screen and (max-width:600px){
     .rounded-circle{
         width: 180px;
@@ -83,37 +74,4 @@ select{
     #no{
         display: none;
     }
-}
-
-table{
-    color: white;
-    margin: 0 auto;
-    text-align: center;
-}
-th{
-    border: 1px solid #EC808D;
-    color: #750036;
-    border-bottom: 2px solid #EC808D !important;
-}
-td{
-    border-top: 0px solid  #EC808D;
-}
-.bordesid{
-    color: #750036;
-    background-color: #DAC0CF;
-    border-color: #EC808D;
-    border-top:  1px #EC808D;
-    border-left: 1px solid  #EC808D;
-    border-bottom: 1px solid  #EC808D;
-    border-right: 1px solid  #EC808D;
-}
-.bordes{
-    text-align: start;
-    color: #750036;
-    background-color:white;
-    border-top: #EC808D;
-    border-color:  1px #EC808D;
-    border-left: 1px solid  #EC808D;
-    border-bottom: 1px solid  #EC808D;
-    border-right: 1px solid  #EC808D;
 }

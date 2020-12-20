@@ -18,41 +18,4 @@ main {
     position: initial;
 }
 
-@media only screen and (max-width:1000px) {
-    #no{
-        display: none;
-    }
-  }
-@media only screen and (max-width:850px){
-    #no{
-        display: none;
-    }
-    #no2{
-        display: none;
-    }
-}
-@media only screen and (max-width:780px){
-    #no{
-        display: none;
-    }
-    #no2{
-        display: none;
-    }
-    #no3{
-        display: none;
-    }
-}
-@media only screen and (max-width:584px){
-    #no{
-        display: none;
-    }
-    #no2{
-        display: none;
-    }
-    #no3{
-        display: none;
-    }
-    #no4{
-        display: none;
-    }
-}
+

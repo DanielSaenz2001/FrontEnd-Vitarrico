@@ -18,41 +18,25 @@ main {
     position: initial;
 }
 
-@media only screen and (max-width:1000px) {
-    #no{
-        display: none;
-    }
-  }
-@media only screen and (max-width:850px){
-    #no{
-        display: none;
-    }
-    #no2{
-        display: none;
-    }
+
+input{
+    border: 1px solid #309EAE;
+    background-color: #F2F2F2;
+    width: 100%;
 }
-@media only screen and (max-width:780px){
-    #no{
-        display: none;
-    }
-    #no2{
-        display: none;
-    }
-    #no3{
-        display: none;
-    }
+select{
+    border: 1px solid #309EAE;
+    background-color: #F2F2F2;
+    width: 100%;
+    color: black;
 }
-@media only screen and (max-width:584px){
-    #no{
-        display: none;
-    }
-    #no2{
-        display: none;
-    }
-    #no3{
-        display: none;
-    }
-    #no4{
-        display: none;
-    }
+.form-control{
+    color: black;
+    font-weight: bold;
+}
+.form-control:disabled{
+    background-color: #309EAE;
+    color: black;
+    font-weight: bold;
+    border-color: 1px solid #309EAE;
 }

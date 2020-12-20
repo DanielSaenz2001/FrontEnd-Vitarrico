@@ -17,6 +17,11 @@ main {
     }
 }
 
+
+.col-lg-3 ,.col-xl-3,.col-lg-2 ,.col-xl-2,.col-md-3,.col-md-2,.col-9 ,.col-sm-9
+,.col-12 ,.col-sm-12 ,.col-md-6 ,.col-lg-6 ,.col-xl-6,.col-md-12,.col-md-9,.col-5,.col-4,.col-6{
+    position: initial;
+}
 input{
     border: 1px solid #309EAE;
     background-color: #F2F2F2;
@@ -37,9 +42,4 @@ select{
     color: black;
     font-weight: bold;
     border-color: 1px solid #309EAE;
-}
-
-.col-lg-3 ,.col-xl-3,.col-lg-2 ,.col-xl-2,.col-md-3,.col-md-2,.col-9 ,.col-sm-9
-,.col-12 ,.col-sm-12 ,.col-md-6 ,.col-lg-6 ,.col-xl-6,.col-md-12,.col-md-9,.col-5,.col-4,.col-6{
-    position: initial;
 }

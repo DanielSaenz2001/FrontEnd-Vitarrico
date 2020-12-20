@@ -2,8 +2,8 @@
 <main>
     <div class="mt-2" *ngIf="ListCompra&& tipo == 'vista'">
         <div class="row mt-3 mb-2" style="color: white;">
-            <div  style="width: 90%; border: 1px solid #EC808D; color: #750036; background-color: #DAC0CF;">
-                <b style="vertical-align: middle;">||Ingreso de materias primas"</b>
+            <div  style="width: 90%;border: 1px solid #309EAE; color: black; background: linear-gradient(0.25turn,#FF5143, #309EAE) !important;">
+                <b style="vertical-align: middle;">||Ingreso de materias primas</b>
               </div> 
         </div>
         <div class="row mt-3 mb-5" style="color: white;">
@@ -12,7 +12,7 @@
                     <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                         Tipo de Documento:
                     </div>
-                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8" >
+                    <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8" >
                         Factura
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                     <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                         Nro de Documento:
                     </div>
-                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                         {{ListCompra.nFactura}}
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                     <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                         Fecha:
                     </div>
-                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                         {{ListCompra.fecha}}
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                     <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                         Proveedor:
                     </div>
-                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                         {{ListCompra.proveedor}}
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                     <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                         Recibio:
                     </div>
-                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                         {{ListCompra.recibe}}
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                     <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                         Observación:
                     </div>
-                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                         {{ListCompra.observacion}}
                     </div>
                 </div>
@@ -70,12 +70,12 @@
         <div class="row" style="color: white; ">
             <div class="col-12">
                 <fieldset class="scheduler-border">
-                    <legend class="scheduler-border" style="font-weight: bolder;">Productos entregados</legend>
+                    <legend class="dato scheduler-border" style="font-weight: bolder;">Productos entregados</legend>
                     <div class="control-group">
                         <div class="col-12">
                             <div class="row">
                                 <table class="table">
-                                    <thead style="background-color: #DAC0CF;">
+                                    <thead>
                                         <tr >
                                             <th id="no">#</th>
                                             <th>Nombre</th>
@@ -87,7 +87,7 @@
                                     <tbody>
                                         <tr *ngFor="let u of ListDetalles; index as i">
                                                 <td class="bordesid"id="no"     style=" text-align: center;">
-                                                    <img src="{{u.materia_prima_imagen}}" alt="" style="width: 30px;">
+                                                    {{i+1}}
                                                 </td>
                                                 <td class="bordes"              style=" text-align: center;">{{u.materia_prima_nombre}}</td>
                                                 <td class="bordes"  id="no4"    style=" text-align: center;">{{u.cantidad_prima}}</td>
@@ -137,7 +137,7 @@
                       <div class="dato2 col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                           Numero Factura:
                       </div>
-                      <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                           <input type="text" class="form-control" formControlName="nFactura" >
                       </div>
                     </div>
@@ -145,7 +145,7 @@
                       <div class="dato2 col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                           Proveedor:
                       </div>
-                      <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                         <select class="form-control" id="sel1"  formControlName="proveedor_id" id="provincia" name="provincia" >
                             <option *ngFor="let p of ListProveedores" [ngValue]="p.id">{{p.nombre}}</option>
                         </select>
@@ -158,7 +158,7 @@
                         <div class="dato2 col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                             Doc. Completa:
                         </div>
-                        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                        <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                             <input type="text" class="form-control" formControlName="doc_completa" >
                         </div>
                       </div>
@@ -166,7 +166,7 @@
                         <div class="dato2 col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                           Observaciones:
                         </div>
-                        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                        <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                           <input type="text" class="form-control" formControlName="observacion" >
                         </div>
                       </div>
@@ -179,7 +179,7 @@
                       <div class="dato2 col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                           Producto:
                       </div>
-                      <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                      <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                           <select class="form-control" id="sel1" [(ngModel)]="producto_id" >
                             <option *ngFor="let p of ListProductos" [ngValue]="p.id">{{p.nombre}}</option>
                         </select>
@@ -192,7 +192,7 @@
               </div>
               <div class="row">
                 <table class="table">
-                    <thead style="background-color: #DAC0CF;">
+                    <thead>
                         <tr >
                             <th id="no">#</th>
                             <th>Nombre</th>
