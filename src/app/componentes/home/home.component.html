@@ -2,7 +2,7 @@
 <main>
         <div *ngIf="tipo2 == 'vista' && ListUsuarios">
             <div class="row mt-3 mb-2" style="color: white;">
-                <div  style="width: 90%; border: 1px solid #EC808D; color: #750036; background-color: #DAC0CF;">
+                <div  style="width: 90%; border: 1px solid #309EAE; color: black; background: linear-gradient(0.25turn,#FF5143, #309EAE) !important;">
                     <b style="vertical-align: middle;">||DATOS DEL EMPLEADO, SISTEMA DE  ALMACEN"</b>
                   </div> 
             </div>
@@ -12,7 +12,7 @@
                         <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                             Tipo de Documento:
                         </div>
-                        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8" >
+                        <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8" >
                             Cedula
                         </div>
                     </div>
@@ -22,7 +22,7 @@
                         <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                             Nro de Documento:
                         </div>
-                        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                        <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                             {{ListUsuarios.dni}}
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                         <div class="dato col-9 col-sm-9 col-md-5 col-lg-5 col-xl-5">
                             Nombre:
                         </div>
-                        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+                        <div class="resp col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
                             {{ListUsuarios.name}}
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                         <div class="dato col-9 col-sm-9 col-md-5 col-lg-5 col-xl-5">
                             Email:
                         </div>
-                        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+                        <div class="resp col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
                             {{ListUsuarios.email}}
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                         <div class="dato col-9 col-sm-9 col-md-5 col-lg-5 col-xl-5">
                             Rol:
                         </div>
-                        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+                        <div class="resp col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
                             {{ListUsuarios.rol}}
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                         <div class="dato col-9 col-sm-9 col-md-5 col-lg-5 col-xl-5">
                             Area:
                         </div>
-                        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+                        <div class="resp col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
                             {{ListUsuarios.area}}
                         </div>
                     </div>
@@ -84,7 +84,7 @@
         </div>
         <div *ngIf="tipo2 == 'update'">
             <div class="row mt-3 mb-2" style="color: white;">
-                <div  style="width: 90%; border: 1px solid #EC808D; color: #750036; background-color: #DAC0CF;">
+                <div  style="width: 90%; border: 1px solid #309EAE; color: black; background: linear-gradient(0.25turn,#FF5143, #309EAE) !important;">
                     <b style="vertical-align: middle;">||ACTUALIZACIÓN DEL EMPLEADO, SISTEMA DE ALMACEN"</b>
                 </div> 
             </div>
@@ -95,7 +95,7 @@
                             <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                                 Nombre:
                             </div>
-                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                            <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                                 <input type="text" class="form-control" formControlName="name" >
                             </div>
                         </div>
@@ -103,7 +103,7 @@
                             <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                                 DNI:
                             </div>
-                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                            <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                                 <input type="text" class="form-control" formControlName="dni" >
                             </div>
                         </div>
@@ -111,7 +111,7 @@
                             <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                                 Rol:
                             </div>
-                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                            <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                                 <input type="text" class="form-control" formControlName="rol" >
                             </div>
                         </div>
@@ -119,7 +119,7 @@
                             <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                                 Correo:
                             </div>
-                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                            <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                                 <input type="text"  class="form-control" formControlName="email" >
                             </div>
                         </div>
@@ -131,7 +131,7 @@
                             <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                                 Area:
                             </div>
-                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                            <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                                 <input type="text" class="form-control" formControlName="area" >
                             </div>
                         </div>
@@ -139,7 +139,7 @@
                             <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                                 Imagen:
                             </div>
-                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                            <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                                 <input type="search" class="form-control" formControlName="imagen_user" >
                                 
                             </div>
@@ -148,7 +148,7 @@
                             <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                                 Estado:
                             </div>
-                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                            <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                                 <select class="form-control" id="sel1" formControlName="autorizado" >
                                     <option value=true *ngIf="UsuarioForm.value.autorizado == 1"> Habilitado </option>
                                     <option value=true *ngIf="UsuarioForm.value.autorizado == 0"> Deshabilitado </option>
@@ -175,7 +175,7 @@
         </div>
         <div *ngIf="tipo2 == 'contra'">
             <div class="row mt-3 mb-2" style="color: white;">
-                <div  style="width: 90%; border: 1px solid #EC808D; color: #750036; background-color: #DAC0CF;">
+                <div  style="width: 90%; border: 1px solid #309EAE; color: black; background: linear-gradient(0.25turn,#FF5143, #309EAE) !important;">
                     <b style="vertical-align: middle;">||CAMBIAR CONTRASEÑA, SISTEMA DE ALMACEN"</b>
                 </div> 
             </div>
@@ -186,7 +186,7 @@
                             <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                                 Correo:
                             </div>
-                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                            <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                                 <input type="text"  class="form-control" formControlName="email" >
                             </div>
                         </div>
@@ -194,7 +194,7 @@
                             <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                                 Contraseña antigua:
                             </div>
-                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                            <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                                 <input type="text"  class="form-control" formControlName="password" >
                             </div>
                         </div>
@@ -206,7 +206,7 @@
                             <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                                 Contraseña nueva:
                             </div>
-                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                            <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                                 <input type="text"  class="form-control" formControlName="password_confirmation" >
                             </div>
                         </div>
@@ -214,7 +214,7 @@
                             <div class="dato col-9 col-sm-9 col-md-4 col-lg-4 col-xl-4">
                                 Repetir contraseña:
                             </div>
-                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                            <div class="resp col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                                 <input type="text"  class="form-control" formControlName="password_new" >
                             </div>
                         </div>

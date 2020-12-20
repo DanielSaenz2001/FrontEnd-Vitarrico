@@ -3,11 +3,6 @@ main {
     margin-left: 5rem;
     padding: 1rem; 
 }
-.card-header{
-    border: 1px solid #EC808D; 
-    color: #750036; 
-    background-color: #DAC0CF;
-}
 @media only screen and (max-width:599px){
     main{
         margin-right: 0%;
@@ -65,14 +60,7 @@ td{
 ,.col-12 ,.col-sm-12 ,.col-md-6 ,.col-lg-6 ,.col-xl-6,.col-md-12,.col-md-9{
     position: initial;
 }
-.boton{
-    background-color: #daaeb3 !important;  
-    border: 1px solid #FC7DB2 !important; 
-    border-radius: 8px;
-    width: 100px;
-    height: 50px;
-    color: black     !important;
-}
+
 .botones{
     width: 10%;
 }

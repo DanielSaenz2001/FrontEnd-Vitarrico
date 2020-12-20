@@ -13,5 +13,5 @@ nav.navbar ul.nav li {
  
 /* cambiar el color de fondo a la barra */
 nav.navbar {
-    background-color: #8b2a3f !important; 
+    background: linear-gradient(0.25turn,#FF5143, #309EAE) !important; 
 }

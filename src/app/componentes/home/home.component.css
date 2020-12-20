@@ -14,36 +14,39 @@ main {
     }
 }
 input{
-    border: 1px solid #EC808D;
-    background-color: #DAC0CF;
+    border: 1px solid #FF5143;
+    background-color: #F2F2F2;
     width: 100%;
 }
 select{
-    border: 1px solid #EC808D;
+    border: 1px solid #FF5143;
     background-color: #F2F2F2;
     width: 100%;
-    color: #6D000E;
+    color: black;
+}
+.form-control{
+    color: black;
+    font-weight: bold;
 }
 .form-control:disabled{
-    background-color: #F2F2F2;
-    color: #750036;
+    background-color: #309EAE;
+    color: black;
     font-weight: bold;
-    border-color: 1px solid #EC808D;
+    border-color: 1px solid #FF5143;
 }
-.boton{
-    width: 120px !important;
-    text-align: center !important;
-    margin: auto !important;
-    background-color: #daaeb3 !important;  
-    border: 1px solid #FC7DB2 !important; 
-    border-radius: 8px; 
-    color: black !important;
-}
+
 .col-4, .col-sm-9 ,.col-md-4 ,.col-lg-4 ,.col-xl-4,.col-12 ,.col-sm-12 ,.col-md-8 ,.col-lg-8 ,.col-xl-8,.col-6
 .col-9 ,.col-md-4 ,.col-lg-4 ,.col-xl-4,.col-12 ,
 .col-sm-12 ,.col-md-8 ,.col-lg-8 ,.col-xl-8,.col-6, .col-md-6 ,.col-lg-6 ,.col-xl-6
-,.col-5 ,.col-7,.col-8,.col-md-6,.col-10{
+,.col-5 ,.col-7,.col-8,.col-md-6,.col-10,.col{
     position: initial;
+}
+.dato{
+    color: black;
+    font-weight: bolder;
+}
+.resp{
+    color: black;
 }
 @media only screen and (max-width:600px){
     .rounded-circle{
