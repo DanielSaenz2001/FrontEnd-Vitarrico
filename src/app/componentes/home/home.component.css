@@ -14,12 +14,12 @@ main {
     }
 }
 input{
-    border: 1px solid #FF5143;
+    border: 1px solid #309EAE;
     background-color: #F2F2F2;
     width: 100%;
 }
 select{
-    border: 1px solid #FF5143;
+    border: 1px solid #309EAE;
     background-color: #F2F2F2;
     width: 100%;
     color: black;
@@ -32,8 +32,9 @@ select{
     background-color: #309EAE;
     color: black;
     font-weight: bold;
-    border-color: 1px solid #FF5143;
+    border-color: 1px solid #309EAE;
 }
+
 
 .col-4, .col-sm-9 ,.col-md-4 ,.col-lg-4 ,.col-xl-4,.col-12 ,.col-sm-12 ,.col-md-8 ,.col-lg-8 ,.col-xl-8,.col-6
 .col-9 ,.col-md-4 ,.col-lg-4 ,.col-xl-4,.col-12 ,
